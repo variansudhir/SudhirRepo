@@ -1,0 +1,60 @@
+﻿<Window x:Class="Sudhir.TestManager.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestManager"
+        mc:Ignorable="d"
+        Title="Test Manager" Height="400" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Name="topMenuPanel">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_New Configuration" />
+                    <MenuItem Header="_Open Existing Configuration" />                 
+                    <Separator />
+                    <MenuItem Header="_Exit" />
+                </MenuItem>
+                <MenuItem Header="_View">
+                    <MenuItem Header="_Help" />
+                    <Separator />
+                    <MenuItem Header="_About Author" />
+                </MenuItem>
+            </Menu>
+            <TextBox AcceptsReturn="True" />
+        </DockPanel>
+
+        <DockPanel Grid.Column="0" Grid.Row="1" Name="leftPanel">
+          <ListBox Name="availableTests" DockPanel.Dock="Left">
+                <ListBoxItem> Test 1 
+                    
+                </ListBoxItem>
+                <ListBoxItem>Test 2
+
+                </ListBoxItem>
+                <ListBoxItem>Test 3
+
+                </ListBoxItem>
+            </ListBox>        
+        </DockPanel>
+
+        <DockPanel Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" Name="bottomPanel">
+             <StatusBar DockPanel.Dock="Bottom">
+                    Executing test 2 of 3...
+                    <ProgressBar Width="100" Height="15" Value="67" />
+                    67% Complete
+                </StatusBar>
+        </DockPanel>
+    </Grid>
+</Window>
