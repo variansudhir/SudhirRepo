@@ -1,3 +1,2 @@
-# hello-world
-my first repository
-I am just learning
+# Sudhir Repo
+I am learning how to use GitHub as source code repository
